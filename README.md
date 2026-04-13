@@ -22,13 +22,11 @@ This project is a Selenium Java Automation Framework developed using Page Object
 * Maven
 * ExtentReports
 
-## How to Run
-
-Run using:
-
-```
-mvn test
-```
+## Project Structure
+- src/main/java → Framework code
+- src/test/java → Test cases
+- reports → Extent Reports
+- screenshots → Failure screenshots
 
 ## Reports
 
