@@ -57,7 +57,6 @@ HealthcareAutomationFramework
 │
 ├── testng.xml
 ├── pom.xml
-
 ---
 
 ## Test Coverage
