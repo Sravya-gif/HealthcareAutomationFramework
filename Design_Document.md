@@ -4,37 +4,6 @@
 
 Page Object Model (POM)
 
----
-
-## Architecture / Structure
-
-The framework is designed using layered architecture:
-
-1. **Base Layer**
-
-  * Contains BaseTest and BasePage classes
-  * Handles WebDriver initialization and common methods
-
-2. **Page Layer**
-
-  * Contains Page classes (LoginPage, AppointmentPage, HistoryPage, ConfirmationPage)
-  * Includes locators and reusable actions
-
-3. **Test Layer**
-
-  * Contains all TestNG test classes
-  * Executes test scenarios using Page methods
-
-4. **Utility Layer**
-
-  * Contains reusable utilities like:
-
-    * ConfigReader
-    * ExcelUtils (Data-driven testing)
-    * ScreenshotUtil
-    * ExtentReports Manager
-
----
 
 ## Features
 
@@ -45,16 +14,49 @@ The framework is designed using layered architecture:
 * Screenshot capture on failure 
 * ExtentReports for HTML reporting
 
+## Project Structure
 ---
-
-## Test Flow
-
-1. Launch Browser
-2. Login to Application
-3. Perform Appointment Booking
-4. Verify Appointment History
-5. Execute Validation Scenarios
-6. Logout and Close Browser
+HealthcareAutomationFramework
+│
+├── src/main/java
+│   ├── com.srm.base
+│   │   ├── BasePage.java
+│   │   └── BaseTest.java
+│   │
+│   ├── com.srm.driver
+│   │   └── DriverFactory.java
+│   │
+│   ├── com.srm.listeners
+│   │   └── TestListener.java
+│   │
+│   ├── com.srm.pages
+│   │   ├── LoginPage.java
+│   │   ├── AppointmentPage.java
+│   │   ├── ConfirmationPage.java
+│   │   └── HistoryPage.java
+│   │
+│   ├── com.srm.utils
+│   │   ├── ConfigReader.java
+│   │   ├── ExcelUtils.java
+│   │   ├── ScreenshotUtil.java
+│   │   └── ExtentManager.java
+│
+├── src/main/resources
+│   ├── config.properties
+│   └── testdata3.xlsx
+│
+├── src/test/java
+│   └── com.srm.tests
+│       ├── LoginTest.java
+│       ├── LogoutTest.java
+│       ├── AppointmentTest.java
+│       ├── MultipleAppointmentTest.java
+│       ├── HistoryTest.java
+│       ├── ValidationTest.java
+│       └── CommentValidationTest.java
+│
+├── testng.xml
+├── pom.xml
 
 ---
 
@@ -66,8 +68,7 @@ The framework is designed using layered architecture:
 * Multiple Appointments
 * Appointment History Verification
 * Form Validations (empty fields, long input)
-
----
+  
 
 ##  Tools & Technologies
 
